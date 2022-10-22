@@ -1,7 +1,5 @@
 package entities;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Rectangle {
     public double width;
     public double height;
