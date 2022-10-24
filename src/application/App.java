@@ -5,14 +5,11 @@ import java.util.Scanner;
 import entities.Employee;
 import entities.Rectangle;
 import entities.Student;
+import util.CurrencyCalculator;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-
-        terceiroExercicio();
-
-        scan.close();
+        exercicioMembrosEstaticos();
     }
 
     public static void primeiroExercicio() {
@@ -69,4 +66,18 @@ public class App {
         scan.close();
     }
 
+    public static void exercicioMembrosEstaticos() {
+        Scanner scan = new Scanner(System.in);
+        double quantityMoney;
+        double priceDollar;
+
+        System.out.print("What's the price of the dollar? ");
+        priceDollar = scan.nextDouble();
+        System.out.print("Enter the amound of dollars to buy: ");
+        quantityMoney = CurrencyCalculator.buyDollar(priceDollar, scan.nextDouble());
+
+        System.out.println("\n\nAmount to be paid in BRL: " + quantityMoney);
+
+        scan.close();
+    }
 }
